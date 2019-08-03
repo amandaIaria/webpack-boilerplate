@@ -84,3 +84,18 @@ npm run ...
   -  check-types        
         +  check typescripts
         +  "tsc",
+
+        there are some new/updated commands
+        "build": "rm -rf ./production/ && npm run prod-webpack && npm run server-webpack",
+    "build-check": "rm -rf ./production/ && npm run check-types && webpack --mode production --config ./.configs/webpack/webpack.production.config.js",
+    "dev": "webpack-dev-server --mode development --config ./.configs/webpack/webpack.dev.config.js",
+    "check-types": "tsc",
+    "lint-style": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
+    "testandlint": "npm run lint-style && npm run test-build",
+    "test-watch": "webpack --mode development -w --progress --colors --config ./.configs/webpack/webpack.test.config.js",
+    "test-build": "rm -rf ./tests/compiled/ && webpack  --mode production --progress --colors --config ./.configs/webpack/webpack.test.config.js",
+    "delete-tests": "rm -rf ./tests/compiled/",
+    "start": "node ./production/assets/scripts/server.bundle.js",
+    "prod-webpack": " webpack --mode production --config ./.configs/webpack/webpack.production.config.js",
+    "server-webpack": " webpack --mode production --config ./.configs/webpack/webpack.server.config.js",
+    "local-build-server": "npm run build && npm run start"
