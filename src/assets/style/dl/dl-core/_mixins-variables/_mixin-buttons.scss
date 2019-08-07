@@ -1,0 +1,35 @@
+@mixin button {
+  border:             map-get($button-attributes, bordersize );
+  border-radius:      map-get($button-attributes, borderradius);
+  cursor:             pointer;
+  padding:            map-get($button-attributes, padding );
+  position:           relative;
+  @include transition($dl-transition);
+}
+
+@mixin button-color($color) {
+  @if $color == 'primary' {
+    border-color:     map-get($button-color-primary, bordercolor);
+    background-color: map-get($button-color-primary, backgroundcolor);
+    color:            map-get($button-color-primary, color);
+  }
+  @else if $color == 'secondary' {
+    border-color:     map-get($button-color-secondary, bordercolor);
+    background-color: map-get($button-color-secondary, backgroundcolor);
+    color:            map-get($button-color-secondary, color);
+  } 
+}
+
+@mixin button-label {
+  font-size:          map-get($button-attributes, labelfontsize);
+}
+
+@mixin button-icon {
+
+}
+
+@mixin button-sizes($size) {
+  
+}
+
+ 

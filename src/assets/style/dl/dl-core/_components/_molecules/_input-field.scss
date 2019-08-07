@@ -1,0 +1,115 @@
+/*
+  Label and Input
+  Molecule
+  Component
+
+  A component for the label and input used together.
+
+  Label, input, helper text
+  Organism
+  component
+
+  A component that includes the label and input, but also helper text
+*/
+
+.dlc-input-field {
+  @include text-field();
+
+  &__input-container {
+    @extend .dlc-label__container;
+
+    i {
+      position: relative;
+    }
+  }
+
+  &__input { 
+    @extend .dlc-input__text;
+  }
+
+  &__label {
+    @extend .dlc-label__floating;
+  }
+
+  &__textarea {
+  }
+
+  &--bordered {
+    @extend .dlc-label--bordered;
+  }
+
+  &--underline {
+    @extend .dlc-label--underline;
+  }
+
+  &--fullwidth {
+  }
+
+  &--disabled {
+    color: #ccc;
+    pointer-events: none;
+    cursor: not-allowed;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+ 
+  &--dense {
+  }
+
+  &--inline {
+    clear: both;
+    height: auto;
+
+    .dlc-button {
+      vertical-align: bottom;
+      margin-bottom: 4px;
+    }
+  }
+
+  &--with-leading-icon {
+    &:not(.active) {
+      i {
+        top: -8px;
+      }
+
+      span {
+        padding-left: 24px;
+      }
+    }
+
+    input {
+      padding-left: 4px;
+    }
+
+  }
+
+  &--with-trailing-icon {
+    i {
+      background: #fff;
+      height: 44px;
+      width: 32px;
+      right: 30px;
+      top: -22px;
+      
+      &:before {
+        top: 14px;
+        position: relative;
+        left: 8px;
+      }
+    }
+  }
+
+  &--no-label {
+    padding: 0;
+  }
+
+  &:focus,
+  &--focused {
+  }
+
+  &:hover {
+  }
+
+}

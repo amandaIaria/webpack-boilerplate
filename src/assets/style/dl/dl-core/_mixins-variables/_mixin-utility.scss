@@ -1,0 +1,27 @@
+@mixin ripple {
+  
+}
+
+@mixin box-shadow($t) {
+  -webkit-box-shadow: $t;
+     -moz-box-shadow: $t;
+          box-shadow: $t;
+}
+
+@mixin transition($t) {
+  -webkit-transition: $t;
+     -moz-transition: $t;
+          transition: $t;
+}
+
+@mixin transform($t) {
+  -webkit-transform: $t;
+     -moz-transform: $t;
+          transform: $t;
+}
+
+@mixin transform-origin($t){
+  -webkit-transform-origin: $t;
+     -moz-transform-origin: $t;
+          transform-origin: $t;
+}

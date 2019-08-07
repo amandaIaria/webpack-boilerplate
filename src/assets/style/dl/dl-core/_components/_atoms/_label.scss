@@ -1,0 +1,72 @@
+$color:                 $grey3;
+$modifier:              ease;
+$positionY:             0;
+$positionX:             10px;
+$scale:                 0.5;
+$max-width:             100px;
+
+/*
+  Label
+  Atom
+  Component
+
+  
+*/
+
+.dlc-label {
+  &__container {
+    @include label-container;
+
+    &.active,
+    &:active,
+    &:focus,
+    &:focus-within {
+      .dlc-input-field__label {
+        @include label-container-span-focus;
+      }
+
+      &.error .dlc-input-field__label {
+        @include label-container-span-focus-error;
+      }
+    }
+  }
+
+  &--bordered {
+    border: thin solid;
+    border-radius: 2px;
+
+    &:focus-within:not(.error) {
+      @include label-container-bordered-focus;
+    }
+
+    &:hover:not(.error) {
+      @include label-container-bordered-hover;
+    }
+  }
+
+  &--underline {
+    border: none;
+    border-bottom: thin solid;
+
+    &:focus-within:not(.error) {
+      @include label-container-underline-focus;
+    }
+
+    &:hover:not(.error) {
+      @include label-container-underline-hover;
+    }
+  }
+
+  &__floating {
+    @include label-floating;
+
+    &--float-above {
+      @include mdc-floating-label-float-position($positionY, $positionX, $scale);
+    }
+
+    &--shake {
+      @include mdc-floating-label-shake-keyframes($modifier, $positionY, $positionX, $scale);
+      @include mdc-floating-label-shake-animation($modifier);
+    }
+  }
+}

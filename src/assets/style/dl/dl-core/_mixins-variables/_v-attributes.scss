@@ -1,0 +1,37 @@
+/*
+  * These will pull in the correct attributes from which ever brand
+  * folder you are using. No values should be placed in here. They should
+  * all be comming from npm moduels.
+*/
+
+$button-attributes: (
+  bordersize:     $dl-button-bordersize,
+  padding:        $dl-button-padding,
+  borderradius:   $dl-button-borderradius,
+  labelfontsize:  $dl-button-labelfontsize 
+);
+
+$input-attributes: (
+  containerwidth:   100%,
+  inputwidth:       100%,
+  containerheight:  $dl-text-field-height,
+  borderbottom:     thin solid $dl-text-field-border-bottom-color,
+  inputborder:      none,
+  labelfocussize:   $dl-text-field-label-size-focus,
+  labelsize:        $dl-text-field-label-size,
+  labelcolor:       $dl-text-field-label-color,
+  labelcolorfocus:  $dl-text-field-label-color-focus,
+  containerborderradius: $dl-text-field-containerborderradius,
+  inputfontsize:    $dl-text-field-inputfontsize,
+  inputheight:      $dl-text-field-inputheight,
+  containerpadding: $dl-text-field-containerpadding
+);
+
+$card-attributes: ();
+
+@mixin transition($t) {
+          transition: $t;
+     -moz-transition: $t;
+      -os-transition: $t;
+  -webkit-transition: $t;
+}

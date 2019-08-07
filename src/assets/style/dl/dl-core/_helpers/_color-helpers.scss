@@ -1,0 +1,46 @@
+/*
+  Color Helpers
+  Atom
+  Utility
+
+*/
+
+.dlu {
+  &--error {
+    color: red;
+    border-color: red;
+  }
+
+  &--information {
+    color: blue;
+    border-color: blue;
+  }
+
+  &--success {
+    color: green;
+    border-color: green;
+  }
+
+  &--caution {
+    color: yellow;
+    border-color: yellow;
+  }
+
+  &--background {
+    &--error {
+      background-color: red;
+    }
+  
+    &--information {
+      background-color: blue;
+    }
+  
+    &--success {
+      background-color: green;
+    }
+  
+    &--caution {
+      background-color: yellow;
+    }
+  }
+}

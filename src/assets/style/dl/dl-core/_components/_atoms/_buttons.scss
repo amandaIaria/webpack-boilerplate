@@ -1,0 +1,29 @@
+  /*
+    Button
+    Atom
+    Component
+
+    ** Container needs to have the `.dl-c-button` class
+
+  */
+  
+.dlc-button {
+  @include button();
+
+  &--primary-color {
+    @include button-color(primary);
+  }
+
+  &--secondary-color {
+    @include button-color(secondary);
+  }
+
+  &__label {
+    @include button-label();
+  }
+
+  &:focus {
+    
+  }
+
+}

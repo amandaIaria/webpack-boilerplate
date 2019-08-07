@@ -1,0 +1,23 @@
+  /*
+    Ripple
+    Atom
+    Utility
+
+  */
+
+.dlu-ripple {
+  @include mdc-ripple-surface;
+  @include mdc-ripple-radius-bounded;
+  @include mdc-states-press-opacity(.4);
+  overflow: hidden;
+  
+  &--primary {
+    @include mdc-states(map-get($button-color-primary, color), true);
+    //@include mdc-states-base-color(map-get($button-color-primary, color));
+  }
+ 
+  &--secondary {
+    @include mdc-states(map-get($button-color-secondary, color), true);
+    //@include mdc-states-base-color( map-get($button-color-secondary, color) );
+  }
+}

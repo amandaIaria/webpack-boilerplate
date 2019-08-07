@@ -1,0 +1,39 @@
+$color: $grey3;
+
+/*
+  Input
+  Atom
+  Component
+
+  A component that creates a container for the inputs.
+*/
+.dlc-input {
+
+  &__text {
+    @include input;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+
+  }
+
+  &__file {
+
+  }
+
+  &__password {
+
+  }
+
+  &__number {
+
+  }
+
+  &__date {
+
+  }
+}

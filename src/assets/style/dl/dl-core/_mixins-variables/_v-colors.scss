@@ -1,0 +1,18 @@
+// Lightened Backgrounds
+$background-colors: (
+  primary:          lighten(map-get($brand-primary, normal ), 50%),
+  secondary:        lighten(map-get($brand-secondary, normal ), 50%)
+);
+
+// buttons
+$button-color-primary: ( 
+  bordercolor:      map-get($brand-primary, normal ),
+  backgroundcolor:  map-get($background-colors, primary ),
+  color:            map-get($brand-primary, normal )
+);
+
+$button-color-secondary: ( 
+  bordercolor:      map-get($brand-secondary, normal ),
+  backgroundcolor:  map-get($background-colors, secondary ),
+  color:            map-get($brand-secondary, normal )
+);
