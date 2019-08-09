@@ -29,9 +29,37 @@ $input-attributes: (
 
 $card-attributes: ();
 
-@mixin transition($t) {
-          transition: $t;
-     -moz-transition: $t;
-      -os-transition: $t;
-  -webkit-transition: $t;
-}
+// These should use variables but for the moment it won't
+$fonts: ( 
+  weight: (
+    
+  ),
+  line-height: (
+
+  ),
+  font-size: (
+
+  ),
+  family: (
+    noto: 'Noto',
+    inter: 'Inter'
+  )
+);
+
+$logos: (
+  mapfre: (
+    white: '',
+    red: '',
+    knockout: ''
+  ),
+  verti: (
+    white: '',
+    regular: '',
+    knockout: '',
+  ),
+  placeholder: (
+    1: 'http://placehold.it/100x100'
+  ),
+);
+
+$icons: '';

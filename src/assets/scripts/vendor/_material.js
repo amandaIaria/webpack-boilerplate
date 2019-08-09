@@ -6,4 +6,5 @@
 
 import { MDCRipple } from '@material/ripple';
 
-const ripple = new MDCRipple(document.querySelector('.dlu-ripple'));
+const buttons = document.querySelectorAll('.dlu-ripple');
+buttons.forEach(button => MDCRipple.attachTo(button));

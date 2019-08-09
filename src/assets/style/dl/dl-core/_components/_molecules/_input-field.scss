@@ -10,6 +10,8 @@
   component
 
   A component that includes the label and input, but also helper text
+
+  This is organized by type. Input, textarea, etc
 */
 
 .dlc-input-field {
@@ -24,14 +26,23 @@
   }
 
   &__input { 
-    @extend .dlc-input__text;
+    @extend .dlc-input__input;
+  }
+
+  &__textarea-container {
+    @extend .dlc-label__textarea-container;
+  }
+
+  &__textarea {
+    @extend .dlc-input__textarea;
+  }
+
+  &--textarea {
+    @include label-container-textarea 
   }
 
   &__label {
     @extend .dlc-label__floating;
-  }
-
-  &__textarea {
   }
 
   &--bordered {
@@ -43,24 +54,20 @@
   }
 
   &--fullwidth {
+    // possible won't need
   }
 
   &--disabled {
-    color: #ccc;
-    pointer-events: none;
-    cursor: not-allowed;
-
-    &:hover {
-      cursor: not-allowed;
-    }
-  }
- 
-  &--dense {
+    @include input-disabled;
   }
 
   &--inline {
     clear: both;
     height: auto;
+
+    & > * {
+      @extend .dlu--inline;
+    }
 
     .dlc-button {
       vertical-align: bottom;
@@ -69,36 +76,11 @@
   }
 
   &--with-leading-icon {
-    &:not(.active) {
-      i {
-        top: -8px;
-      }
-
-      span {
-        padding-left: 24px;
-      }
-    }
-
-    input {
-      padding-left: 4px;
-    }
-
+    @include leading-icons('input');
   }
 
   &--with-trailing-icon {
-    i {
-      background: #fff;
-      height: 44px;
-      width: 32px;
-      right: 30px;
-      top: -22px;
-      
-      &:before {
-        top: 14px;
-        position: relative;
-        left: 8px;
-      }
-    }
+    @include trailing-icons('input');
   }
 
   &--no-label {
@@ -106,7 +88,9 @@
   }
 
   &:focus,
+  &:focus-within,
   &--focused {
+    @extend .dlc-label--focus-container;
   }
 
   &:hover {

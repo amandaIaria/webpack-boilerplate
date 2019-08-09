@@ -2,7 +2,6 @@
     Label, Input, and helper text, could contain an icon
   */
 
-
 .dlc-input-helper { 
   @extend .dlc-input-field;
 
@@ -10,9 +9,3 @@
     @extend .dlc-caption;
   }
 }
-
-// mdc-text-field-shape-radius($radius, $rtl-reflexive)
-// mdc-text-field-line-ripple-color($color) 
-// mdc-text-field-outline-shape-radius($radius, $rtl-reflexive)
-
-

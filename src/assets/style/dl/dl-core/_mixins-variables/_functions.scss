@@ -1,0 +1,49 @@
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+      $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// function like mixins, functions always first
+
+@mixin color-modifiers($attribute: 'color', $prefix: '-', $separator: '-') {
+  @each $name, $color in $colors {
+    &#{$prefix}#{$name} {
+      @each $tone, $hex in $color {
+        &#{$tone} {
+          #{$attribute}: $hex;
+        }
+      }
+    }
+  }
+}
+
+@mixin create-class-modifiers($mainMapName, $attribute, $prefix: '-', $separator: '-') {
+  @each $mainMapAttribute, $childMapName in $mainMapName {
+    &#{$prefix}#{$mainMapAttribute} {
+      @each $childMapAttribute, $childMapElement in $childMapName {
+        &#{$separator}#{$childMapAttribute} {
+          #{$attribute}: $childMapElement;
+        }
+      }
+    }
+  }
+}
+
+@mixin create-colorstates-utl($mainMapName: 'alertStates', $prefix: '__', $separator: '--') {
+  @each $colorStateName, $colorStateChild in $mainMapName {
+    &#{$prefix}#{$colorStateName} {
+      @each $attribute, $color in $colorStateChild {
+        @if $attribute != 'background-color' {
+          #{$attribute}: $color;
+        }
+        @else {
+          &#{$separator}#{$attribute} {
+            #{$attribute}: $color;
+          }
+        }
+      }
+    }
+  }
+}

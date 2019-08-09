@@ -5,42 +5,19 @@
 
 */
 
-.dlu {
-  &--error {
-    color: red;
-    border-color: red;
-  }
-
-  &--information {
-    color: blue;
-    border-color: blue;
-  }
-
-  &--success {
-    color: green;
-    border-color: green;
-  }
-
-  &--caution {
-    color: yellow;
-    border-color: yellow;
-  }
-
-  &--background {
-    &--error {
-      background-color: red;
-    }
-  
-    &--information {
-      background-color: blue;
-    }
-  
-    &--success {
-      background-color: green;
-    }
-  
-    &--caution {
-      background-color: yellow;
-    }
-  }
+.dlu-states {
+  @include create-colorstates-utl($colorStates);
 }
+
+.dlu-text__color {
+  @include color-modifiers($prefix: '--');
+}
+
+.dlu-background__color {
+  @include color-modifiers($prefix: '--');
+}
+
+.dlu-border__color {
+  @include color-modifiers($prefix: '--');
+}
+

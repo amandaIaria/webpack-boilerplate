@@ -1,13 +1,12 @@
 @mixin label-floating {
-  left: 16px;
   top: 18px;
+  width: 97%;
   pointer-events: none;
   -webkit-font-smoothing: antialiased;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
   position: absolute;
   left: 8px;
-  line-height: 1.15rem;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -36,30 +35,34 @@
   @include transform(translateY(0));
 }
 
-@mixin label-container-bordered-focus {
-  border-color: transparent;
-  @include box-shadow(inset 0 0 0px 2px #006580);
+@mixin label-container-bordered($color, $type) {
+  @if $type == 'hover' or $type == 'focus' {
+    border-color: $color;
+    @include box-shadow(inset 0 0 0px 1px $color);
+  }
+  @else {
+    border: thin solid;
+    border-radius: 2px;
+  }
 }
 
-@mixin label-container-bordered-hover {
-  border-color: transparent;
-  @include box-shadow(inset 0 0 0px 2px #006580);
-}
-
-@mixin label-container-underline-focus {
-  border-color: transparent;
-  @include box-shadow(inset 0px -2px 0px 0px #006580);
-}
-
-@mixin label-container-underline-hover {
-  border-color: transparent;
-  @include box-shadow(inset 0px -2px 0px 0px #006580);
+@mixin label-container-underline($color, $type) {
+  @if $type == 'hover' or $type == 'focus' {
+    border-color: $color;
+    @include box-shadow(inset 0px -1px 0px 0px $color);
+  }
+  @else {
+    border: none;
+    border-bottom: thin solid;
+  }
 }
 
 @mixin label-container-span-focus {
   @include transform(translateY(-13px) scale(0.8));
 }
 
-@mixin label-container-span-focus-error {
-  
+@mixin label-container-textarea {
+  height: auto;
+  overflow: inherit;
+  display: block;
 }

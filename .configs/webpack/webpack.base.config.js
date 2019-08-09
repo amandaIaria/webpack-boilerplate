@@ -138,7 +138,51 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: './src/template.html',
         filename: 'index.html',
-        title: 'Setting up webpack 4',
+        title: 'Design Library',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/textarea.html',
+        filename: 'textarea.html',
+        title: 'Textarea',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/textbox.html',
+        filename: 'textbox.html',
+        title: 'Textbox',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/buttons.html',
+        filename: 'buttons.html',
+        title: 'Buttons',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/switch.html',
+        filename: 'switch.html',
+        title: 'Switch',
         inject: true,
         minify: {
           removeComments: true,

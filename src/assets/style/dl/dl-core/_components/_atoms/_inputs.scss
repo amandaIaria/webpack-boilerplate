@@ -8,32 +8,24 @@ $color: $grey3;
   A component that creates a container for the inputs.
 */
 .dlc-input {
-
-  &__text {
+  &__input { @include input; }
+  
+  &__textarea {
     @include input;
+    @include textarea;
+  }
+  
+  &__text { }
+  &__password { }
+  &__number { }
+  &__date { }
+  &__phone { }
+  &__email { }
 
+  &__textarea,
+  &__input {
     &:focus {
       outline: none;
     }
-  }
-
-  &__textarea {
-
-  }
-
-  &__file {
-
-  }
-
-  &__password {
-
-  }
-
-  &__number {
-
-  }
-
-  &__date {
-
   }
 }

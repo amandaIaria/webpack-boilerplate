@@ -29,6 +29,59 @@ $green2: #3cb371 !default;
 $green3: #008000 !default;
 $green4: #006400 !default;
 
+// red 
+$red1: #FFE4E1 !default;
+$red2: #Faa07a !default;
+$red3: #Fa8072 !default;
+$red4: #FF0000 !default;
+$red5: #dc143c !default;
+$red6: #800000 !default;
+
+// yellow:
+$yellow1: #ffffe0 !default;
+$yellow2: #FFFF00 !default;
+$yellow3: #FFd700 !default;
+$yellow4: #bdb76b !default;
+
+// orange
+$orange1: #ffefd5 !default;
+$orange2: #ffa500 !default;
+$orange3: #ff8c00 !default;
+$orange4: #ff6347 !default;
+$orange5: #FF4500 !default;
+
+// purple:
+$purple1: #E6E6FA !default;
+$purple2: #dda0dd !default;
+$purple3: #FF00FF !default;
+$purple4: #990099 !default;
+$purple5: #800080 !default;
+$purple6: #4B0082 !default;
+
+// States
+$colorStates: (
+  error: (
+    color: $red4,
+    border-color: $red4,
+    background-color: $red1,
+  ),
+  information: (
+    color: $blue3,
+    border-color: $blue3,
+    background-color: $blue1,
+  ),
+  success: (
+    color: $green3,
+    border-color: $green3,
+    background-color: $green1
+  ),
+  caution: (
+    color: $yellow3,
+    border-color: $yellow3,
+    background-color: $yellow1
+  )
+);
+
 // Primary
 $brand-primary: (
   normal:   $green3,

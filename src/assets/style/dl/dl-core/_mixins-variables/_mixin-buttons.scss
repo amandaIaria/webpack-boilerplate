@@ -4,6 +4,7 @@
   cursor:             pointer;
   padding:            map-get($button-attributes, padding );
   position:           relative;
+  display:            inline-block;
   @include transition($dl-transition);
 }
 
@@ -32,4 +33,6 @@
   
 }
 
- 
+@mixin button-file {
+
+}

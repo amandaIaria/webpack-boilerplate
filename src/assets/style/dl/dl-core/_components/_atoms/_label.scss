@@ -1,59 +1,46 @@
-$color:                 $grey3;
-$modifier:              ease;
-$positionY:             0;
-$positionX:             10px;
-$scale:                 0.5;
-$max-width:             100px;
-
 /*
   Label
   Atom
   Component
 
-  
 */
 
 .dlc-label {
   &__container {
     @include label-container;
+  }
 
-    &.active,
-    &:active,
-    &:focus,
-    &:focus-within {
-      .dlc-input-field__label {
-        @include label-container-span-focus;
-      }
+  &__textarea-container {
+    @include label-container-textarea;
+  }
 
-      &.error .dlc-input-field__label {
-        @include label-container-span-focus-error;
-      }
+  &--focus-container {
+    .dlc-input-field__label {
+      @include label-container-span-focus;
     }
   }
 
   &--bordered {
-    border: thin solid;
-    border-radius: 2px;
+    @include label-container-bordered(#006580, 'regular');
 
-    &:focus-within:not(.error) {
-      @include label-container-bordered-focus;
+    &:focus-within {
+      @include label-container-bordered(#006580, 'focus');
     }
 
-    &:hover:not(.error) {
-      @include label-container-bordered-hover;
+    &:hover {
+      @include label-container-bordered(#006580, 'hover');
     }
   }
 
   &--underline {
-    border: none;
-    border-bottom: thin solid;
+    @include label-container-underline(#006580, 'regular');
 
-    &:focus-within:not(.error) {
-      @include label-container-underline-focus;
+    &:focus-within {
+      @include label-container-underline(#006580, 'focus');
     }
 
-    &:hover:not(.error) {
-      @include label-container-underline-hover;
+    &:hover {
+      @include label-container-underline(#006580, 'hover');
     }
   }
 
@@ -61,12 +48,27 @@ $max-width:             100px;
     @include label-floating;
 
     &--float-above {
-      @include mdc-floating-label-float-position($positionY, $positionX, $scale);
     }
 
     &--shake {
-      @include mdc-floating-label-shake-keyframes($modifier, $positionY, $positionX, $scale);
-      @include mdc-floating-label-shake-animation($modifier);
+    }
+  }
+}
+
+.dlu-states__error { 
+  .dlc-label--underline {
+    &:focus,
+    &:focus-within,
+    &:hover {
+      @include label-container-underline(map-deep-get($colorStates,'error', 'border-color'), 'hover');
+    }
+  }
+
+  .dlc-label--bordered {
+    &:focus,
+    &:focus-within,
+    &:hover {
+      @include label-container-bordered(map-deep-get($colorStates,'error', 'border-color'), 'hover');
     }
   }
 }

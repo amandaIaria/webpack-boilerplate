@@ -22,8 +22,15 @@
     @include button-label();
   }
 
+  &__input {
+    display: none;
+  }
+
+  &__file-label {
+  }
+
   &:focus {
-    
+    outline: none;
   }
 
 }
