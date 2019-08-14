@@ -53,10 +53,6 @@
     @extend .dlc-label--underline;
   }
 
-  &--fullwidth {
-    // possible won't need
-  }
-
   &--disabled {
     @include input-disabled;
   }
@@ -87,13 +83,9 @@
     padding: 0;
   }
 
-  &:focus,
-  &:focus-within,
+  &__input-container:focus,
+  &__input-container:focus-within,
   &--focused {
     @extend .dlc-label--focus-container;
   }
-
-  &:hover {
-  }
-
 }

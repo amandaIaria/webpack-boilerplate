@@ -9,14 +9,9 @@
   
 .dlc-button {
   @include button();
-
-  &--primary-color {
-    @include button-color(primary);
-  }
-
-  &--secondary-color {
-    @include button-color(secondary);
-  }
+  // if we don't need to extend it then use this method and map
+  @include create-classes($buttons, '--', '-');
+  @include create-classes($buttons-sizes, '--');
 
   &__label {
     @include button-label();
@@ -26,11 +21,7 @@
     display: none;
   }
 
-  &__file-label {
-  }
-
   &:focus {
     outline: none;
   }
-
 }

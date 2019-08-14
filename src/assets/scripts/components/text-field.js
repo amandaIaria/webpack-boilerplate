@@ -22,9 +22,7 @@ $labelContainers.forEach(($labelContainer) => {
       $thisLabel = e.srcElement.parentNode.classList,
       input = $input.value;
     // const $spanLabel = this.querySelector('.dlc-input-field__label');
-    console.log($thisLabel);
     if (input === '' && $thisLabel.contains('dlc-input-field--focused') && !$date) {
-      console.log(e.srcElement);
       e.srcElement.parentNode.classList.remove('dlc-input-field--focused');
     }
   });
@@ -45,9 +43,7 @@ $txtContainers.forEach(($txtContainer) => {
       $thisLabel = e.srcElement.parentNode.classList,
       input = $input.value;
     // const $spanLabel = this.querySelector('.dlc-input-field__label');
-    console.log($thisLabel);
     if (input === '' && $thisLabel.contains('dlc-input-field--focused')) {
-      console.log(e.srcElement);
       e.srcElement.parentNode.classList.remove('dlc-input-field--focused');
     }
   });

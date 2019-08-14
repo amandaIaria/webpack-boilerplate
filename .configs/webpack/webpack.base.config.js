@@ -136,7 +136,7 @@ module.exports = {
         Promise: 'es6-promise',
       }),
       new HtmlWebpackPlugin({
-        template: './src/template.html',
+        template: './src/components/pages/template.html',
         filename: 'index.html',
         title: 'Design Library',
         inject: true,
@@ -147,7 +147,7 @@ module.exports = {
         }
       }),
       new HtmlWebpackPlugin({
-        template: './src/textarea.html',
+        template: './src/components/pages/textarea.html',
         filename: 'textarea.html',
         title: 'Textarea',
         inject: true,
@@ -158,7 +158,7 @@ module.exports = {
         }
       }),
       new HtmlWebpackPlugin({
-        template: './src/textbox.html',
+        template: './src/components/pages/textbox.html',
         filename: 'textbox.html',
         title: 'Textbox',
         inject: true,
@@ -169,7 +169,7 @@ module.exports = {
         }
       }),
       new HtmlWebpackPlugin({
-        template: './src/buttons.html',
+        template: './src/components/pages/buttons.html',
         filename: 'buttons.html',
         title: 'Buttons',
         inject: true,
@@ -180,7 +180,7 @@ module.exports = {
         }
       }),
       new HtmlWebpackPlugin({
-        template: './src/switch.html',
+        template: './src/components/pages/switch.html',
         filename: 'switch.html',
         title: 'Switch',
         inject: true,
@@ -189,7 +189,39 @@ module.exports = {
           collapseWhitespace: true,
           interpolate: true,
         }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/navs.html',
+        filename: 'navs.html',
+        title: 'Navs',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/helpers.html',
+        filename: 'helpers.html',
+        title: 'Helpers',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/animations.html',
+        filename: 'animations.html',
+        title: 'Animations',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
       })
     ]
-
 };

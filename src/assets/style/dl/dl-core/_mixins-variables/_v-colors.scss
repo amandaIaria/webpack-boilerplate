@@ -1,4 +1,3 @@
-
 $colors: (
   grey: (
     white: $white,
@@ -64,20 +63,125 @@ $colors: (
 
 // Lightened Backgrounds
 $background-colors: (
-  primary:          lighten(map-get($brand-primary, normal ), 50%),
-  secondary:        lighten(map-get($brand-secondary, normal ), 50%)
+  primary: lighten(map-get($brand-primary, normal ), 30%),
+  secondary: lighten(map-get($brand-secondary, normal ), 30%),
+  trinary: lighten(map-get($brand-trinary, normal ), 30%),
 );
 
 // buttons
-$button-color-primary: ( 
-  bordercolor:      map-get($brand-primary, normal ),
-  backgroundcolor:  map-get($background-colors, primary ),
-  color:            map-get($brand-primary, normal )
+$buttons: (
+  primary: (
+    flat: (
+      border-color: transparent,
+      background-color: transparent,
+      color: map-get($brand-primary, normal ),
+      hover: (
+        background-color: $grey1,
+      ),
+      disabled: (
+        color: map-get($background-colors , 'primary' )
+      )
+    ),
+    solid: (
+      border-color: map-get($brand-primary, normal ),
+      background-color: map-get($brand-primary, normal ),
+      color: $white,
+      hover: (
+        box-shadow: 0 8px 17px 0 $black,
+      ),
+      disabled: (
+        background-color: map-get($background-colors , 'primary' ),
+        border-color: map-get($background-colors , 'primary' )
+      )
+    ),
+    ghost: (
+      border-color: map-get($brand-primary, normal ),
+      background-color: transparent,
+      color: map-get($brand-primary, normal ),
+      hover: (
+        background-color: map-get($brand-primary, normal ),
+        color: $white
+      ),
+      disabled: (
+        color: map-get($background-colors , 'primary' ),
+        border-color: map-get($background-colors , 'primary' )
+      )
+    )
+  ),
+  secondary: (
+    flat: (
+      border-color: transparent,
+      background-color: transparent,
+      color: map-get($brand-secondary, normal ),
+      hover: (
+        background-color: $grey1,
+      ),
+      disabled: (
+        color: map-get($background-colors , 'secondary' )
+      )
+    ),
+    solid: (
+      border-color: map-get($brand-secondary, normal ),
+      background-color: map-get($brand-secondary, normal ),
+      color: $white,
+      hover: (
+        box-shadow: 0 8px 17px 0 $black,
+      ),
+      disabled: (
+        background-color: map-get($background-colors , 'secondary' ),
+        border-color: map-get($background-colors , 'secondary' )
+      )
+    ),
+    ghost: (
+      border-color: map-get($brand-secondary, normal ),
+      background-color: transparent,
+      color: map-get($brand-secondary, normal ),
+      hover: (
+        background-color: map-get($brand-secondary, normal ),
+        color: $white
+      ),
+      disabled: (
+        color: map-get($background-colors , 'secondary' ),
+        border-color: map-get($background-colors , 'secondary' )
+      )
+    )
+  ),
+  trinary: (
+    flat: (
+      border-color: transparent,
+      background-color: transparent,
+      color: map-get($brand-trinary, normal ),
+      hover: (
+        background-color: $grey1,
+      ),
+      disabled: (
+        color: map-get($background-colors , 'trinary' )
+      )
+    ),
+    solid: (
+      border-color: map-get($brand-trinary, normal ),
+      background-color: map-get($brand-trinary, normal ),
+      color: $white,
+      hover: (
+        box-shadow: 0 8px 17px 0 $black,
+      ),
+      disabled: (
+        background-color: map-get($background-colors , 'trinary' ),
+        border-color: map-get($background-colors , 'trinary' )
+      )
+    ),
+    ghost: (
+      border-color: map-get($brand-trinary, normal ),
+      background-color: transparent,
+      color: map-get($brand-trinary, normal ),
+      hover: (
+        background-color: map-get($brand-trinary, normal ),
+        color: $white
+      ),
+      disabled: (
+        color: map-get($background-colors , 'trinary' ),
+        border-color: map-get($background-colors , 'trinary' )
+      )
+    )
+  )
 );
-
-$button-color-secondary: ( 
-  bordercolor:      map-get($brand-secondary, normal ),
-  backgroundcolor:  map-get($background-colors, secondary ),
-  color:            map-get($brand-secondary, normal )
-);
-

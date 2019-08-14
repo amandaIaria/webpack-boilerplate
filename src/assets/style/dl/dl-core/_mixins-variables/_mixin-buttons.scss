@@ -6,19 +6,11 @@
   position:           relative;
   display:            inline-block;
   @include transition($dl-transition);
-}
 
-@mixin button-color($color) {
-  @if $color == 'primary' {
-    border-color:     map-get($button-color-primary, bordercolor);
-    background-color: map-get($button-color-primary, backgroundcolor);
-    color:            map-get($button-color-primary, color);
+  &:disabled,
+  &[disabled] {
+    pointer-events: none;
   }
-  @else if $color == 'secondary' {
-    border-color:     map-get($button-color-secondary, bordercolor);
-    background-color: map-get($button-color-secondary, backgroundcolor);
-    color:            map-get($button-color-secondary, color);
-  } 
 }
 
 @mixin button-label {
@@ -26,13 +18,5 @@
 }
 
 @mixin button-icon {
-
-}
-
-@mixin button-sizes($size) {
-  
-}
-
-@mixin button-file {
 
 }

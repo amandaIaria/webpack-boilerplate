@@ -12,12 +12,22 @@
   overflow: hidden;
   
   &--primary {
-    @include mdc-states(map-get($button-color-primary, color), true);
-    //@include mdc-states-base-color(map-get($button-color-primary, color));
+    @include mdc-states(map-get($brand-primary, normal ), true);
   }
  
   &--secondary {
-    @include mdc-states(map-get($button-color-secondary, color), true);
-    //@include mdc-states-base-color( map-get($button-color-secondary, color) );
+    @include mdc-states(map-get($brand-secondary, normal ), true);
+  }
+
+  &--trinary {
+    @include mdc-states(map-get($brand-trinary, normal ), true);
+  }
+
+  &--dark {
+    @include mdc-states($black, true);
+  }
+
+  &--light {
+    @include mdc-states($white, true);
   }
 }
