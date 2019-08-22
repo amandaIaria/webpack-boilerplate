@@ -30,6 +30,9 @@ __This repo includes__:
       +  '@img': Images directory
       +  '@js': Scripts/Js directory
       +  '@':  Overall src directory
+  -  Documentation
+      +  Sassdoc and jsdoc have been added to the package.json
+      +  They have not been set up.
 
 
 __Future__
