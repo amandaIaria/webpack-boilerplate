@@ -1,18 +1,23 @@
 {
-  "name": "static-site-template",
+  "name": "DL-webpack",
   "version": "1.0.0",
   "description": "A template for static webpack sites",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./production/ && webpack --mode production --config ./.configs/webpack/webpack.production.config.js",
+    "build": "rm -rf ./production/ && npm run prod-webpack",
+    "build-notests": "rm -rf ./production/ && npm run prod-webpack && npm run server-webpack",
     "build-check": "rm -rf ./production/ && npm run check-types && webpack --mode production --config ./.configs/webpack/webpack.production.config.js",
     "dev": "webpack-dev-server --mode development --config ./.configs/webpack/webpack.dev.config.js",
     "check-types": "tsc",
     "lint-style": "sass-lint -c .sass-lint.yml 'src/**/*.scss' -v -q",
     "testandlint": "npm run lint-style && npm run test-build",
     "test-watch": "webpack --mode development -w --progress --colors --config ./.configs/webpack/webpack.test.config.js",
-    "test-build": "rm -rf ./tests/compiled/ && webpack  --mode production --progress --colors --config ./.configs/webpack/webpack.test.config.js",
-    "delete-tests": "rm -rf ./tests/compiled/"
+    "test-build": "npm run delete-tests && webpack  --mode production --progress --colors --config ./.configs/webpack/webpack.test.config.js",
+    "delete-tests": "rm -rf ./tests/compiled/",
+    "start": "node ./production/assets/scripts/server.bundle.js",
+    "prod-webpack": " webpack --mode production --config ./.configs/webpack/webpack.production.config.js",
+    "server-webpack": " webpack --mode production --config ./.configs/webpack/webpack.server.config.js",
+    "local-build-server": "npm run build && npm run start"
   },
   "keywords": [
     "template"
@@ -50,6 +55,8 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.1.0",
+    "ejs-loader": "^0.3.3",
+    "es6-promise": "^4.2.8",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-loader": "^2.2.1",
@@ -59,7 +66,12 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "htmllint-loader": "^2.1.4",
+<<<<<<< HEAD
     "jsdoc": "^3.6.3",
+=======
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
+>>>>>>> f632a956978aeaac6f079f4387e709368df22dea
     "mini-css-extract-plugin": "^0.8.0",
     "mocha": "^6.2.0",
     "mocha-jsdom": "^2.0.0",
@@ -91,7 +103,11 @@
     "not ie <= 8"
   ],
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.1",
     "@babel/polyfill": "^7.4.4",
+    "@material/line-ripple": "^3.1.0",
+    "@material/ripple": "^3.1.0",
+    "@material/tab-bar": "^3.1.0",
     "ejs-loader": "^0.3.3",
     "es6-promise": "^4.2.8"
   }

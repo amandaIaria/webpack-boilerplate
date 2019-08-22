@@ -28,8 +28,9 @@ module.exports = merge(webpackBaseConfig, {
     ]
   },
   plugins: [
-    new StyleLintPlugin({
-      configFile: './.configs/.stylelintrc',
-      context: 'src'
-    })]
+    // new StyleLintPlugin({
+    //   configFile: './.configs/.stylelintrc',
+    //   context: 'src'
+    // })
+  ]
 });

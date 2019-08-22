@@ -30,9 +30,10 @@ module.exports = {
           options: {
             noquotes: true,
             name: '[name].[ext]',
-            outputPath: 'assets/img/svg/'
+            outputPath: '/assets/img/svg/'
           }
         },
+        
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           use: [{
@@ -60,9 +61,19 @@ module.exports = {
         {
           test: /\.scss$/,
           use: [
-            { loader: 'style-loader' },
+            { 
+              loader: 'style-loader',
+              options: {
+                sourceMap: true
+              }
+            },
             MiniCssExtractPlugin.loader,
-            { loader: 'css-loader' },
+            { 
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+              }
+            },
             {
               loader: 'postcss-loader',
               options: {
@@ -74,7 +85,8 @@ module.exports = {
               options: {
                 includePaths: ['./node_modules'],
                 config: {
-                  path: './.configs'  
+                  path: './.configs',
+                  sourceMap: true
                 }
               }
             }
@@ -124,9 +136,86 @@ module.exports = {
         Promise: 'es6-promise',
       }),
       new HtmlWebpackPlugin({
-        template: './src/template.html',
+        template: './src/components/pages/template.html',
         filename: 'index.html',
-        title: 'Setting up webpack 4',
+        title: 'Design Library',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/textarea.html',
+        filename: 'textarea.html',
+        title: 'Textarea',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/textbox.html',
+        filename: 'textbox.html',
+        title: 'Textbox',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/buttons.html',
+        filename: 'buttons.html',
+        title: 'Buttons',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/switch.html',
+        filename: 'switch.html',
+        title: 'Switch',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/navs.html',
+        filename: 'navs.html',
+        title: 'Navs',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/helpers.html',
+        filename: 'helpers.html',
+        title: 'Helpers',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          interpolate: true,
+        }
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/components/pages/animations.html',
+        filename: 'animations.html',
+        title: 'Animations',
         inject: true,
         minify: {
           removeComments: true,
@@ -135,5 +224,4 @@ module.exports = {
         }
       })
     ]
-
 };
