@@ -66,12 +66,9 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "htmllint-loader": "^2.1.4",
-<<<<<<< HEAD
     "jsdoc": "^3.6.3",
-=======
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
->>>>>>> f632a956978aeaac6f079f4387e709368df22dea
     "mini-css-extract-plugin": "^0.8.0",
     "mocha": "^6.2.0",
     "mocha-jsdom": "^2.0.0",
