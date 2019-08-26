@@ -100,11 +100,7 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.1",
     "@babel/polyfill": "^7.4.4",
-    "@material/line-ripple": "^3.1.0",
-    "@material/ripple": "^3.1.0",
-    "@material/tab-bar": "^3.1.0",
     "ejs-loader": "^0.3.3",
     "es6-promise": "^4.2.8"
   }
