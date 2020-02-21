@@ -1,3 +1,4 @@
 // Import our modules
-// import './vendor/_material.js';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import './scripts/app';

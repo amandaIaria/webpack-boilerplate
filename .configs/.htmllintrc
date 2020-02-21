@@ -14,9 +14,7 @@
         "marginwidth",
         "marginheight",
         "scrolling",
-        "style",
-        "width",
-        "height"
+        "style"
     ],
     "attr-name-ignore-regex": false,
     "attr-name-style": "dash",
@@ -28,7 +26,6 @@
     "attr-req-value": false,
     "attr-validate": false,
     "class-no-dup": true,
-    "class-style": "bem",
     "doctype-first": false,
     "doctype-html5": false,
     "fig-req-figcaption": true,
@@ -40,7 +37,6 @@
     "html-valid-content-model": false,
     "id-class-ignore-regex": false,
     "id-class-no-ad": true,
-    "id-class-style": "dash",
     "id-no-dup": true,
     "img-req-alt": "allownull",
     "img-req-src": false,
@@ -70,5 +66,7 @@
     "tag-self-close": "always",
     "text-ignore-regex": false,
     "title-max-len": 80,
-    "title-no-dup": true
+    "title-no-dup": true,
+     "class-style": false,
+     "id-class-style": false
 }

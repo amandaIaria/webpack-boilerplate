@@ -6,7 +6,6 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-      '@babel/polyfill',
       path.join(__dirname, '../../src/assets/app.js'),
       path.join(__dirname, '../../src/assets/style/app.scss')
     ],
