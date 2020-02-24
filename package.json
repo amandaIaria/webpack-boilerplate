@@ -53,7 +53,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "bufferutil": "^4.0.1",
-    "caniuse-lite": "^1.0.30001027",
+    "caniuse-lite": "^1.0.30001030",
     "canvas": "^2.6.1",
     "chai": "^4.2.0",
     "chai-dom": "^1.8.1",
@@ -86,10 +86,10 @@
     "sass-loader": "^7.3.1",
     "style-loader": "^0.23.1",
     "stylelint": "^13.2.0",
-    "stylelint-config-recommended": "^2.2.0",
-    "stylelint-webpack-plugin": "^0.10.5",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-webpack-plugin": "^1.2.3",
     "svg-url-loader": "^3.0.3",
-    "terser": "^4.6.3",
+    "terser": "^4.6.4",
     "terser-webpack-plugin": "^1.4.3",
     "typescript": "^3.7.5",
     "utf-8-validate": "^5.0.2",
@@ -102,6 +102,6 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "regenerator-runtime": "^0.13.3"
+    "regenerator-runtime": "^0.13.4"
   }
 }
